@@ -52,7 +52,7 @@ export const loadSearchResults = async function (query) {
         id: rec.id,
         title: rec.title,
         publisher: rec.publisher,
-        image: rec.image_url,
+        image: rec.image_url.replace('http', 'https'),
         ...(rec.key && { key: rec.key }),
       };
     });
